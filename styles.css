@@ -1,0 +1,149 @@
+body {
+    font-family: 'Fira Code', monospace; 
+    background-color: #343131;
+    color: #A04747;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .container {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .category h2 {
+    font-size: 2.9rem;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid #A04747; 
+    padding-bottom: 5px;
+  }
+  
+  .category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .category ul li {
+    margin-bottom: 8px;
+  }
+  
+  .category ul li a {
+    text-decoration: none;
+    color: #D8A25E;
+    font-size: 1.7rem;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .category ul li a:hover {
+    color: #EEDF7A;
+    transform: scale(1.1);
+    }
+
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .modal-content {
+    background-color: #343131;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .welcome-text {
+    /*margin-bottom: 10px;    
+    border-bottom: 2px solid #A04747;*/
+    color: #A04747;
+    font-size: 1.9rem;
+  }
+
+  .modal-text {
+    color: #D8A25E;
+    font-size: 1.2rem;
+  }
+  
+  .modal.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none; /* Prevent interaction when fading out */
+  }
+
+/* command pallet css stolen from gpt :( */
+.command-palette-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* The command input box */
+  .command-palette-content {
+    background-color: #343131;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  #commandInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #343131;
+    color: #d8a25e;
+    outline: none;
+  }
+  
+  #commandInput::placeholder {
+    color: #d8a25e;
+  }
+  
+  /* Command suggestions */
+  .command-suggestions {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .command-suggestions li {
+    padding: 8px;
+    background-color: #2a2a2a;
+    color: #d8a25e;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .command-suggestions li:hover {
+    background-color: #d8a25e;
+    color: #2a2a2a;
+  }
+  
